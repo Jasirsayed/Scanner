@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice PDF Renamer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Invoice PDF Renamer</h1>
+        <p class="subtitle">Automatically rename invoice PDFs as: <strong>Invoice Number - Company Full Name</strong>.</p>
+
+        <label class="upload" for="pdfFile">
+          <input id="pdfFile" type="file" accept="application/pdf" />
+          <span>Upload Invoice PDF</span>
+        </label>
+
+        <section id="result" class="result hidden" aria-live="polite">
+          <h2>Suggested filename</h2>
+          <p id="suggestedName" class="filename"></p>
+          <button id="downloadButton" type="button">Download with new name</button>
+        </section>
+
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="footer">Created by Jasir Sayed</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.mjs" type="module"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
