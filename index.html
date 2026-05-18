@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Renamer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>PDF Renamer</h1>
+      <p class="subtitle">Upload a PDF and get a suggested filename based on the document content.</p>
+
+      <label class="upload" for="pdfFile">
+        <input id="pdfFile" type="file" accept="application/pdf" />
+        <span>Choose PDF file</span>
+      </label>
+
+      <section id="result" class="card hidden" aria-live="polite">
+        <h2>Suggested filename</h2>
+        <p id="suggestedName" class="filename"></p>
+        <button id="downloadButton" type="button">Download with new name</button>
+      </section>
+
+      <section id="status" class="status" aria-live="polite"></section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.mjs" type="module"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
